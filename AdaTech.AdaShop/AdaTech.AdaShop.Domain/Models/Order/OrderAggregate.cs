@@ -4,7 +4,7 @@ namespace AdaTech.AdaShop.Domain.Models.Order
     using AdaTech.AdaShop.Domain.Contracts;
     public class OrderAggregate : IEntity
     {
-        public OrderAggregate(Customer customer, ShippingCompany shippingCompany)
+        public OrderAggregate(ShippingCompany shippingCompany, Customer? customer = null)
         {
             this.ID = Guid.NewGuid().ToString();
             this.Customer = customer;
@@ -18,7 +18,7 @@ namespace AdaTech.AdaShop.Domain.Models.Order
 
         //Podemos ter um customer ou não.
         //Pode ser uma venda online ou na loja
-        public Customer Customer { get; private set; }
+        public Customer? Customer { get; private set; }
 
         public decimal Total { 
 
