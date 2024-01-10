@@ -8,6 +8,14 @@ namespace AdaTech.AdaShop.Domain.Models.Order
         public string Name { get; private set; }
         public string CPF { get; private set; }
         public string Email { get; private set; }
-        public string PhoneNumber { get; private set; }
+        public string? PhoneNumber { get; private set; }
+
+        public Customer(string name, string cpf, string email, string? phoneNumber) {
+            ID = Guid.NewGuid().ToString();
+            Name = name;
+            CPF = cpf;
+            Email = email;
+            PhoneNumber = phoneNumber;
+        }
     }
 }
