@@ -11,6 +11,6 @@ namespace AdaTech.AdaShop.Domain.Contracts
         string Name { get; }
         string CPF { get; }
         string Email { get; }
-        string PhoneNumber { get; }
+        string? PhoneNumber { get; }
     }
 }
