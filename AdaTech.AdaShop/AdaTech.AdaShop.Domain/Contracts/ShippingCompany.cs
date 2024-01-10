@@ -18,5 +18,6 @@ namespace AdaTech.AdaShop.Domain.Contracts
 
         //Calcula o Frete
         public abstract decimal CalculeShipping(OrderAggregate order);
+        public abstract DateTime CalculeDeliveryDate(OrderAggregate order);
     }
 }

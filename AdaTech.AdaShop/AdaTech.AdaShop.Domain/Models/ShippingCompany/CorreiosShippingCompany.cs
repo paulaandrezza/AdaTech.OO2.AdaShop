@@ -7,6 +7,11 @@ namespace AdaTech.AdaShop.Domain.Models.ShippingCompany
     {
         public CorreiosShippingCompany() : base(id: Guid.NewGuid().ToString()) {}
 
+        public override DateTime CalculeDeliveryDate(OrderAggregate order)
+        {
+            return order.OrderDate.AddDays(15); 
+        }
+
         public override decimal CalculeShipping(OrderAggregate order)
         {
             throw new NotImplementedException();
