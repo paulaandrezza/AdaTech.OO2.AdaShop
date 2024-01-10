@@ -2,8 +2,12 @@
 
 namespace AdaTech.AdaShop.Domain.Models.Order
 {
-    public class Customer : IEntity
+    public class Customer : IEntity, IPeople
     {
         public string ID { get; private set; }
+        public string Name { get; private set; }
+        public string CPF { get; private set; }
+        public string Email { get; private set; }
+        public string PhoneNumber { get; private set; }
     }
 }
