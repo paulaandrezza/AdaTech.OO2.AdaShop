@@ -13,7 +13,7 @@ namespace AdaTech.AdaShop.Domain.Models.ShippingCompany
 
         public override decimal CalculeShipping(OrderAggregate order)
         {
-            throw new NotImplementedException();
+            return order.Total / 5;
         }
     }
 }
